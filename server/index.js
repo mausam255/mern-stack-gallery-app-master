@@ -13,7 +13,7 @@ app.use("/api/v1", galleryRoutes);
 
 app.use(express.static("public/upload"));
 
-const PORT = 8000;
+const PORT =  process.env.PORT || 8000;
 
 connectToMongo();
 app.listen(PORT, () => {
